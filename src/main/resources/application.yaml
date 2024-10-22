@@ -1,0 +1,12 @@
+spring:
+  mvc:
+    view:
+      prefix: "/WEB-INF/"
+      suffix: ".jsp"
+  datasource:
+    username: "postgres"
+    password: "m238016a"
+    url: "jdbc:postgresql://localhost:5432/postgres"
+  jpa:
+    hibernate:
+      ddl-auto: update
