@@ -1,26 +1,17 @@
 package com.hostmonitoring.hostmonitoring.controller;
 
 import com.hostmonitoring.hostmonitoring.entity.User;
-import com.hostmonitoring.hostmonitoring.service.UserService;
-import lombok.AllArgsConstructor;
+import com.hostmonitoring.hostmonitoring.service.UserLogon.UserService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@AllArgsConstructor
-public class Login {
+public class UserController {
 
-    PasswordEncoder passwordEncoder;
-    UserService userService;
-
-    @GetMapping("/login")
-    public String login(Model model)
-    {
-        return "login";
-    }
+    private PasswordEncoder passwordEncoder;
+    private UserService userService;
 
     @GetMapping("/add")
     @ResponseBody
@@ -33,11 +24,4 @@ public class Login {
 
         return "OK";
     }
-
-    @GetMapping("/dashboard")
-    public String dashboard()
-    {
-        return "dashboard";
-    }
-
 }

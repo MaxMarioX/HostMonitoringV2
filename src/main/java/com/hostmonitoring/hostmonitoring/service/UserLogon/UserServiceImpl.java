@@ -1,4 +1,4 @@
-package com.hostmonitoring.hostmonitoring.service;
+package com.hostmonitoring.hostmonitoring.service.UserLogon;
 
 import com.hostmonitoring.hostmonitoring.entity.Role;
 import com.hostmonitoring.hostmonitoring.entity.User;
@@ -9,7 +9,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 @AllArgsConstructor

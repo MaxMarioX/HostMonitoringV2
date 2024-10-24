@@ -1,4 +1,4 @@
-package com.hostmonitoring.hostmonitoring.service;
+package com.hostmonitoring.hostmonitoring.service.UserLogon;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
