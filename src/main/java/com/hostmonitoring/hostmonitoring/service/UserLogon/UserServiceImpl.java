@@ -19,7 +19,6 @@ public class UserServiceImpl implements UserService {
     private RoleRepository roleRepository;
     private PasswordEncoder passwordEncoder;
 
-
     @Override
     public User findByUserName(String username) {
         return userRepository.findByName(username);
