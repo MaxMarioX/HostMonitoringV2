@@ -28,6 +28,7 @@ public class WebSecurityConfig {
         return http
                 .authorizeHttpRequests(auth -> {
                     auth.dispatcherTypeMatchers(FORWARD,ERROR).permitAll();
+                    auth.requestMatchers(mvc.pattern("/resources/**")).permitAll();
                     auth.requestMatchers(mvc.pattern("/login")).permitAll();
                     auth.requestMatchers(mvc.pattern("/add")).permitAll();
                     auth.anyRequest().authenticated();

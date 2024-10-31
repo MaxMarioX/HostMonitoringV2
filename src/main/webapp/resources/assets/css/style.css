@@ -20561,29 +20561,29 @@ input:focus {
 
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/Nunito/Nunito-Light.eot");
-  src: url("../fonts/Nunito/Nunito-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Nunito/Nunito-Light.woff2") format("woff2"), url("../fonts/Nunito/Nunito-Light.woff") format("woff"), url("../fonts/Nunito/Nunito-Light.ttf") format("truetype");
+  src: url("Nunito-Light.eot");
+  src: url("Nunito-Light.eot?#iefix") format("embedded-opentype"), url("Nunito-Light.woff2") format("woff2"), url("Nunito-Light.woff") format("woff"), url("Nunito-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/Nunito/Nunito-Bold.eot");
-  src: url("../fonts/Nunito/Nunito-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Nunito/Nunito-Bold.woff2") format("woff2"), url("../fonts/Nunito/Nunito-Bold.woff") format("woff"), url("../fonts/Nunito/Nunito-Bold.ttf") format("truetype");
+  src: url("Nunito-Bold.eot");
+  src: url("Nunito-Bold.eot?#iefix") format("embedded-opentype"), url("Nunito-Bold.woff2") format("woff2"), url("Nunito-Bold.woff") format("woff"), url("Nunito-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/Nunito/Nunito-SemiBold.eot");
-  src: url("../fonts/Nunito/Nunito-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Nunito/Nunito-SemiBold.woff2") format("woff2"), url("../fonts/Nunito/Nunito-SemiBold.woff") format("woff"), url("../fonts/Nunito/Nunito-SemiBold.ttf") format("truetype");
+  src: url("Nunito-SemiBold.eot");
+  src: url("Nunito-SemiBold.eot?#iefix") format("embedded-opentype"), url("Nunito-SemiBold.woff2") format("woff2"), url("Nunito-SemiBold.woff") format("woff"), url("Nunito-SemiBold.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Nunito";
-  src: url("../fonts/Nunito/Nunito-Regular.eot");
-  src: url("../fonts/Nunito/Nunito-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Nunito/Nunito-Regular.woff2") format("woff2"), url("../fonts/Nunito/Nunito-Regular.woff") format("woff"), url("../fonts/Nunito/Nunito-Regular.ttf") format("truetype");
+  src: url("Nunito-Regular.eot");
+  src: url("Nunito-Regular.eot?#iefix") format("embedded-opentype"), url("Nunito-Regular.woff2") format("woff2"), url("Nunito-Regular.woff") format("woff"), url("Nunito-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -22365,7 +22365,7 @@ code {
   color: #ffffff;
 }
 .data-icon-card-primary .background-icon::before {
-  content: url("../images/dashboard/shape-4.svg");
+  content: url("shape-4.svg");
   position: absolute;
 }
 .data-icon-card-primary .background-icon i {
@@ -22381,7 +22381,7 @@ code {
   color: #ffffff;
 }
 .data-icon-card-secondary .background-icon::before {
-  content: url("../images/dashboard/shape-4.svg");
+  content: url("shape-4.svg");
   position: absolute;
 }
 .data-icon-card-secondary .background-icon i {
@@ -22397,7 +22397,7 @@ code {
   color: #ffffff;
 }
 .data-icon-card-success .background-icon::before {
-  content: url("../images/dashboard/shape-4.svg");
+  content: url("shape-4.svg");
   position: absolute;
 }
 .data-icon-card-success .background-icon i {
@@ -22413,7 +22413,7 @@ code {
   color: #ffffff;
 }
 .data-icon-card-info .background-icon::before {
-  content: url("../images/dashboard/shape-4.svg");
+  content: url("shape-4.svg");
   position: absolute;
 }
 .data-icon-card-info .background-icon i {
@@ -22429,7 +22429,7 @@ code {
   color: #ffffff;
 }
 .data-icon-card-warning .background-icon::before {
-  content: url("../images/dashboard/shape-4.svg");
+  content: url("shape-4.svg");
   position: absolute;
 }
 .data-icon-card-warning .background-icon i {
@@ -22445,7 +22445,7 @@ code {
   color: #ffffff;
 }
 .data-icon-card-danger .background-icon::before {
-  content: url("../images/dashboard/shape-4.svg");
+  content: url("shape-4.svg");
   position: absolute;
 }
 .data-icon-card-danger .background-icon i {
@@ -22461,7 +22461,7 @@ code {
   color: #ffffff;
 }
 .data-icon-card-light .background-icon::before {
-  content: url("../images/dashboard/shape-4.svg");
+  content: url("shape-4.svg");
   position: absolute;
 }
 .data-icon-card-light .background-icon i {
@@ -22477,7 +22477,7 @@ code {
   color: #ffffff;
 }
 .data-icon-card-dark .background-icon::before {
-  content: url("../images/dashboard/shape-4.svg");
+  content: url("shape-4.svg");
   position: absolute;
 }
 .data-icon-card-dark .background-icon i {
