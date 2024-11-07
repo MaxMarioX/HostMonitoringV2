@@ -1,4 +1,4 @@
-package com.hostmonitoring.hostmonitoring.service;
+package com.hostmonitoring.hostmonitoring.service.Ping;
 
 import java.io.IOException;
 import java.net.InetAddress;
