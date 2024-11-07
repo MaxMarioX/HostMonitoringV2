@@ -23,7 +23,7 @@ public class HostController {
     {
         Host host = new Host();
         host.setName("Database");
-        host.setIpAddress("192.168.0.7");
+        host.setIpAddress("192.168.1.72");
         hostRepository.save(host);
 
         return "OK";
