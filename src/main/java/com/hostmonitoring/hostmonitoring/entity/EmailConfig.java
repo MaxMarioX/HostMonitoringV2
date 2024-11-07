@@ -8,7 +8,7 @@ import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
 import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
 
 @Entity
-@Table(name = "email_config")
+@Table(name = "email_configs")
 @Getter
 @Setter
 public class EmailConfig {
