@@ -17,17 +17,8 @@ public class Dashboard {
     private HostRepository hostRepository;
 
     @GetMapping("/dashboard")
-    @ResponseBody
-    public String dashboard() throws IOException, InterruptedException {
-        Host host = hostRepository.findByName("Database");
-        String ipHost = host.getIpAddress();
-
-        Ping ping = new Ping();
-
-        if (ping.send(ipHost))
-            return "OK";
-        else
-            return "ERROR";
+    public String dashboard() {
+        return "dashboard";
     }
 
 }
