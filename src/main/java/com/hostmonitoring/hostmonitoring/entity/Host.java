@@ -20,6 +20,6 @@ public class Host {
     @Column(nullable = false, unique = true, length = 27)
     private String ipAddress;
 
-    @OneToOne(mappedBy = "host")
+    @OneToOne(mappedBy = "host", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     private HostAvailability hostAvailability;
 }

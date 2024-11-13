@@ -11,8 +11,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.*;
 
-//Responsible for checking hosts
-public class jHostsControl {
+//Responsible for pinging hosts
+public class jHostsPing {
 
     private HostRepository hostRepository;
     private HostAvailabilityRepository hostAvailabilityRepository;
@@ -20,7 +20,7 @@ public class jHostsControl {
     private List<Host> hostList = null;
     private Ping ping;
 
-    public jHostsControl(HostRepository hostRepository, HostAvailabilityRepository hostAvailabilityRepository)
+    public jHostsPing(HostRepository hostRepository, HostAvailabilityRepository hostAvailabilityRepository)
     {
         this.hostRepository = hostRepository;
         this.hostAvailabilityRepository = hostAvailabilityRepository;
@@ -35,7 +35,7 @@ public class jHostsControl {
     }
 
     //Send ping to each host and save date and time checking
-    public void checkHosts() throws IOException {
+    public Map<Host,Boolean> checkHosts() throws IOException {
         if(hostList != null)
         {
             for(Iterator<Host> hostIterator = hostList.iterator(); hostIterator.hasNext();)
@@ -44,25 +44,27 @@ public class jHostsControl {
 
                 if(ping.send(host.getIpAddress()))
                 {
-                    hostBooleanMap.put(host,true);
+                    hostBooleanMap.put(host,true); //save to table
+
+                    saveDateTime(host);            //save to database
                 } else {
                     hostBooleanMap.put(host,false);
                 }
-                saveDateTime(host);
             }
-
         }
 
-        //return hostBooleanMap;
+        return hostBooleanMap;
     }
 
     //Save date and time checking to database
     private void saveDateTime(Host host)
     {
         HostAvailability hostAvailability = new HostAvailability();
+
         hostAvailability.setLastDate(LocalDate.now());
         hostAvailability.setLastTime(LocalTime.now());
         hostAvailability.setHost(host);
+
         hostAvailabilityRepository.save(hostAvailability);
     }
 }

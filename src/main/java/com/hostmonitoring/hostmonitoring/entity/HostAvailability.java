@@ -25,4 +25,14 @@ public class HostAvailability {
 
     @OneToOne
     private Host host;
+
+    public void setDefaultDate()
+    {
+        this.lastDate = LocalDate.now();
+    }
+
+    public void setDefaultTime()
+    {
+        this.lastTime = LocalTime.now();
+    }
 }
