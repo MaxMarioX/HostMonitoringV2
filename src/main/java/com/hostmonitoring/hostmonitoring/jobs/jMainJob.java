@@ -28,6 +28,8 @@ public class jMainJob {
 
     public void startPing()
     {
+        jHostsPing.setHostsList();
+
         while(true)
         {
             try {
