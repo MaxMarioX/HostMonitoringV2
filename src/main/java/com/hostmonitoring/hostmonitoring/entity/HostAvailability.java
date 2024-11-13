@@ -23,6 +23,6 @@ public class HostAvailability {
     @Column(nullable = true)
     private LocalDate lastDate;
 
-    @OneToOne(mappedBy = "hosts")
+    @OneToOne
     private Host host;
 }

@@ -1,12 +1,8 @@
 package com.hostmonitoring.hostmonitoring.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 @Entity
 @Table(name = "hosts")
@@ -24,7 +20,6 @@ public class Host {
     @Column(nullable = false, unique = true, length = 27)
     private String ipAddress;
 
-    @OneToOne(mappedBy = "hosts_availability")
+    @OneToOne(mappedBy = "host")
     private HostAvailability hostAvailability;
-
 }
