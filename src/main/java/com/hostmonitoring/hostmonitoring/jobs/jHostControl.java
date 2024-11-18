@@ -1,7 +1,6 @@
 package com.hostmonitoring.hostmonitoring.jobs;
 
 import com.hostmonitoring.hostmonitoring.entity.Host;
-import com.hostmonitoring.hostmonitoring.entity.HostAvailability;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -17,10 +16,8 @@ public class jHostControl {
     //Check last date and time received ping and return true when host isn't available more than t_diff
     public boolean checkDateTime(Host host, long t_diff)
     {
-        HostAvailability hostAvailability = host.getHostAvailability();
-
-        LocalDate date = hostAvailability.getLastDate();
-        LocalTime time = hostAvailability.getLastTime();
+        LocalDate date = host.getLastDate();
+        LocalTime time = host.getLastTime();
 
         LocalDate date_now = LocalDate.now();
         LocalTime time_now = LocalTime.now();

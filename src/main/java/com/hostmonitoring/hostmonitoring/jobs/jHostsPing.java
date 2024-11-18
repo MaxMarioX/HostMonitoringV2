@@ -1,8 +1,6 @@
 package com.hostmonitoring.hostmonitoring.jobs;
 
 import com.hostmonitoring.hostmonitoring.entity.Host;
-import com.hostmonitoring.hostmonitoring.entity.HostAvailability;
-import com.hostmonitoring.hostmonitoring.repository.HostAvailabilityRepository;
 import com.hostmonitoring.hostmonitoring.repository.HostRepository;
 
 import java.io.IOException;
@@ -15,13 +13,11 @@ import java.util.*;
 public class jHostsPing {
 
     private HostRepository hostRepository;
-    private HostAvailabilityRepository hostAvailabilityRepository;
     private List<Host> hostList = null;
 
-    public jHostsPing(HostRepository hostRepository, HostAvailabilityRepository hostAvailabilityRepository)
+    public jHostsPing(HostRepository hostRepository)
     {
         this.hostRepository = hostRepository;
-        this.hostAvailabilityRepository = hostAvailabilityRepository;
     }
 
     //Get all hosts from database to List
@@ -54,12 +50,9 @@ public class jHostsPing {
     //Save date and time checking to database
     private void saveDateTime(Host host)
     {
-        HostAvailability hostAvailability = new HostAvailability();
+        host.setLastDate(LocalDate.now());
+        host.setLastTime(LocalTime.now());
 
-        hostAvailability.setLastDate(LocalDate.now());
-        hostAvailability.setLastTime(LocalTime.now());
-        hostAvailability.setHost(host);
-
-        hostAvailabilityRepository.save(hostAvailability);
+        hostRepository.save(host);
     }
 }
