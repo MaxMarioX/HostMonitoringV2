@@ -38,12 +38,6 @@ public class HostController {
 
         return "OK";
     }
-    @GetMapping("/hostTime")
-    public void hostTime() throws IOException {
-        jHostControl = new jHostsPing(hostRepository);
-        jHostControl.setHostsList();
-        jHostControl.checkHosts();
-    }
 
     @GetMapping("/hostcheck")
     @ResponseBody
@@ -61,6 +55,7 @@ public class HostController {
         */
 
         jMainJob jMainJob = new jMainJob(hostRepository);
+        jMainJob.loadSettings();
         jMainJob.startPing();
 
         return "true";

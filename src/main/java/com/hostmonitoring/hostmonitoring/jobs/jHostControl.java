@@ -8,11 +8,6 @@ import java.time.LocalTime;
 //Responsible for control hosts
 public class jHostControl {
 
-    public jHostControl()
-    {
-
-    }
-
     //Check last date and time received ping and return true when host isn't available more than t_diff
     public boolean checkDateTime(Host host, long t_diff)
     {
