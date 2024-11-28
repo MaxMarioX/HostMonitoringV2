@@ -3,6 +3,7 @@ package com.hostmonitoring.hostmonitoring.controller;
 import com.hostmonitoring.hostmonitoring.entity.Host;
 import com.hostmonitoring.hostmonitoring.jobs.jHostsPing;
 import com.hostmonitoring.hostmonitoring.jobs.jMainJob;
+import com.hostmonitoring.hostmonitoring.repository.EmailRepository;
 import com.hostmonitoring.hostmonitoring.repository.HostRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +16,7 @@ import java.io.IOException;
 public class HostController {
 
     private HostRepository hostRepository;
+    private EmailRepository emailRepository;
     private jHostsPing jHostControl;
 
     public HostController(HostRepository hostRepository)
@@ -42,20 +44,9 @@ public class HostController {
     @GetMapping("/hostcheck")
     @ResponseBody
     public String hostCheck() throws IOException {
-        /*
-        Optional<Host> host = hostRepository.findById(2L);
-        jHostControl = new jHostsPing(hostRepository, hostAvailabilityRepository);
 
-        if(jHostControl.checkDateTime(host.get(),50))
-        {
-            return "true";
-        } else {
-            return "false";
-        }
-        */
-
-        jMainJob jMainJob = new jMainJob(hostRepository);
-        jMainJob.loadSettings();
+        jMainJob jMainJob = new jMainJob(hostRepository,emailRepository);
+        jMainJob.prepareMainJob();
         jMainJob.startPing();
 
         return "true";
